@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.aliyoungprog.presentation.fragment.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/home_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookDescriptionFragment"
+        android:name="com.aliyoungprog.presentation.fragment.ProductsDescriptionFragment"
+        android:label="BookDescriptionFragment"
+        tools:layout="@layout/fragment_book_description"/>
+
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.aliyoungprog.presentation.fragment.WeatherFragment"
+        android:label="WeatherFragment"
+        tools:layout="@layout/fragment_weather"/>
+
+    <fragment
+        android:id="@+id/moonCalendarFragment"
+        android:name="com.aliyoungprog.presentation.fragment.MoonCalendarFragment"
+        android:label="MoonCalendarFragment"
+        tools:layout="@layout/fragment_moon_calendar"/>
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.aliyoungprog.presentation.fragment.LibraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" />
+
+
+</navigation>

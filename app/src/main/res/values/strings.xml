@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Online agro</string>
+    <string name="main">Главная</string>
+    <string name="books">Мои книги</string>
+    <string name="profile">Профиль</string>
+    <string name="books_description">Books description</string>
+    <string name="available_veges">Online agro</string>
+    <string name="want_to_read">Хочу прочесть</string>
+    <string name="read">Прочитанные</string>
+    <string name="profile_avatar">profile_avatar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_books">Мои книги</string>
+    <string name="my_friends">Мои друзья</string>
+    <string name="settings">Настройки</string>
+    <string name="user_name">Имя пользователя</string>
+    <string name="number_of_books">3 книги</string>
+    <string name="instagram_placeholder">Instagram: @Test</string>
+    <string name="telegram_placeholder">Telegram: @Test</string>
+    <string name="add_book">Добавить</string>
+    <string name="add_book_title">Добавить книгу</string>
+    <string name="add_photo">Добавьте фото, чтобы пользователи могли быстро находить вашу книгу</string>
+    <string name="book_image">фото</string>
+    <string name="add_book_text">Добавить!</string>
+    <string name="add_book_fragment_book_name">Название книги</string>
+    <string name="user_login">ЛОГИН</string>
+    <string name="user_password">Пароль</string>
+    <string name="registration_button">Регистрация</string>
+    <string name="user_email">Email</string>
+    <string name="user_telega">Telegram</string>
+    <string name="user_insta">Instagram</string>
+    <string name="btn_logout">Выйти</string>
+    <string name="btn_login">Войти</string>
+    <string name="create_account">Создать аккаунт</string>
+    <string name="user_account">АККАУНТ</string>
+
+
+    <string name="title_home">Главная</string>
+    <string name="title_ill">Болезни</string>
+    <string name="title_forecast">Погода</string>
+    <string name="title_library">Библиотека</string>
+    <string name="title_calendar">Календарь</string>
+    <string name="vegetables">Овощи</string>
+    <string name="fruits">Фрукты</string>
+    <string name="berries">Ягоды</string>
+    <string name="flowers">Цветы</string>
+    <string name="conifers">Хвойные</string>
+</resources>

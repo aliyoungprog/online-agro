@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.fragment.DialogItemsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <Button
+            android:id="@+id/vegetables_btn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vegetables" />
+
+        <Button
+            android:id="@+id/fruits_btn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fruits" />
+
+        <Button
+            android:id="@+id/berries_btn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/berries" />
+
+        <Button
+            android:id="@+id/flowers_btn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/flowers" />
+
+        <Button
+            android:id="@+id/conifers_btn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/conifers" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+</layout>

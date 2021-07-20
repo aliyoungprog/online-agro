@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1060362739951",
+    "project_id": "online-agro",
+    "storage_bucket": "online-agro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060362739951:android:ab242633e737c0a0f67b1a",
+        "android_client_info": {
+          "package_name": "com.aliyoungprog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060362739951-stq3ieccirfk287dquga8ff8gp4ce843.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9MVOpjtSw91o7xttCNjrjma2HXfL_MTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060362739951-stq3ieccirfk287dquga8ff8gp4ce843.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
