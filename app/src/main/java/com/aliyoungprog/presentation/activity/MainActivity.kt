@@ -28,12 +28,6 @@ class MainActivity : AppCompatActivity() {
         fragmentManager.commit()
     }
 
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.options_menu,menu)
-        return true
-    }
-
     private fun setupBottomNavBar() {
         bottomNavigationView = findViewById(R.id.bottom_navigation)
         bottomNavigationView.setOnNavigationItemSelectedListener {
@@ -45,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                     changeFragment(WeatherFragment.getInstance())
                 }
                 R.id.navigation_library -> {
-                    changeFragment(LibraryFragment.getInstance())
+                    changeFragment(AllProductsFragment.getInstance())
                 }
                 R.id.navigation_calendar -> {
                     changeFragment(MoonCalendarFragment.getInstance())

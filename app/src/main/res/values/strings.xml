@@ -45,4 +45,9 @@
     <string name="berries">Ягоды</string>
     <string name="flowers">Цветы</string>
     <string name="conifers">Хвойные</string>
+    <string name="City">Город</string>
+    <string name="WeatherStateHolder">переменная облачность</string>
+    <string name="TempWeatherState">0°</string>
+    <string name="TempDate">1 июля 2021 г.</string>
+    <string name="TempDateForAlarm">Предстоящее время полива: Сегодня</string>
 </resources>

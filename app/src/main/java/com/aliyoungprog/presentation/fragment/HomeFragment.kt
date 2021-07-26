@@ -13,14 +13,16 @@ import com.aliyoungprog.domain.entity.Product
 import com.aliyoungprog.presentation.adapters.ItemClickListener
 import com.aliyoungprog.presentation.adapters.NewProductAdapter
 import com.aliyoungprog.presentation.vm.ProductsViewModel
+import kotlinx.android.synthetic.main.home_fragment.*
 import kotlinx.android.synthetic.main.home_fragment.view.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment: Fragment(), ItemClickListener {
 
 
-    lateinit var adapter: NewProductAdapter
-    private val bookViewModel: ProductsViewModel by viewModel()
+    var adapter: NewProductAdapter = NewProductAdapter(arrayListOf(), this)
+
+    private val productsViewModel: ProductsViewModel by viewModel()
     lateinit var binding: HomeFragmentBinding
     private val firebaseAuth = MyFirebaseAuth
 
@@ -33,19 +35,14 @@ class HomeFragment: Fragment(), ItemClickListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        setHasOptionsMenu(true)
         binding = HomeFragmentBinding.inflate(inflater)
         return binding.root
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        menu.clear()
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?){
         super.onViewCreated(view, savedInstanceState)
-        view.new_books.layoutManager = LinearLayoutManager(context)
+        view.user_products.layoutManager = LinearLayoutManager(context)
         setUpViewModel()
         observeBooks()
 
@@ -56,18 +53,20 @@ class HomeFragment: Fragment(), ItemClickListener {
 
 
     private fun observeBooks(){
-        binding.progressBar.visibility = View.VISIBLE
-        bookViewModel.booksLiveData.observe(viewLifecycleOwner, {
-            adapter = NewProductAdapter(it, this)
-            binding.newBooks.adapter = adapter
+        progressBar.visibility = View.VISIBLE
+        user_products.adapter = adapter
+        productsViewModel.allUserProducts.observe(viewLifecycleOwner) {
+            if (it.isEmpty()) empty_text.visibility = View.VISIBLE
+            else empty_text.visibility = View.GONE
+            adapter.products = (it as ArrayList<Product>)
+            adapter.notifyDataSetChanged()
             binding.progressBar.visibility = View.GONE
-        })
+        }
     }
 
     private fun setUpViewModel(){
-        binding.viewModel = bookViewModel
-
-        bookViewModel.getAllUserBooks(firebaseAuth.db_auth.currentUser?.email!!)
+        binding.viewModel = productsViewModel
+        productsViewModel.getAllUserProducts(firebaseAuth.db_auth.currentUser?.email!!)
     }
 
     override fun onItemClicked(product: Product) {
@@ -83,6 +82,6 @@ class HomeFragment: Fragment(), ItemClickListener {
     }
 
     private fun setUpBundle(product: Product){
-        setFragmentResult("getBookName", bundleOf("book_name" to product.name, "book_desc" to product.category))
+        setFragmentResult("getProductName", bundleOf("product_name" to product.name, "product_desc" to product.category))
     }
 }

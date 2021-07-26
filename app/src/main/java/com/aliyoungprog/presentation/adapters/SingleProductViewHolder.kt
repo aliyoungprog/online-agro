@@ -7,7 +7,8 @@ import com.bumptech.glide.Glide
 import com.aliyoungprog.R
 import com.aliyoungprog.data.database.MyFirebaseStorage
 import com.aliyoungprog.domain.entity.Product
-import kotlinx.android.synthetic.main.list_item_book.view.*
+import kotlinx.android.synthetic.main.list_item_product.view.*
+
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

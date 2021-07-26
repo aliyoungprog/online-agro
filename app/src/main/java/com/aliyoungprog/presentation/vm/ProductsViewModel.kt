@@ -6,40 +6,37 @@ import androidx.lifecycle.viewModelScope
 import com.aliyoungprog.domain.ProductRepository
 import com.aliyoungprog.domain.entity.Product
 import kotlinx.coroutines.launch
-import timber.log.Timber
-
 
 class ProductsViewModel(val repository: ProductRepository): ViewModel() {
     // Can talk only with repository
 
-    val booksLiveData = MutableLiveData<List<Product>>()
-    val allUserBook = MutableLiveData<List<Product>>()
+    val productsLiveData = MutableLiveData<List<Product>>()
+    val allUserProducts = MutableLiveData<List<Product>>()
 
-//    fun getAllBooks(){
-//        viewModelScope.launch {
-//            try{
-//                repository.getAllProducts {
-//                    if (it.isEmpty())
-//                        booksLiveData.value = listOf()
-//                    else
-//                        booksLiveData.value = it
-//                }
-//            }catch(e: Exception){
-//                //
-//            }
-//        }
-//    }
+    fun getAllProducts(){
+        viewModelScope.launch {
+            try{
+                repository.getAllProducts {
+                    if (it.isEmpty())
+                        productsLiveData.value = arrayListOf()
+                    else
+                        productsLiveData.value = it
+                }
+            }catch(e: Exception){
+                //
+            }
+        }
+    }
 
 
-    fun getAllUserBooks(email: String){
+    fun getAllUserProducts(email: String){
         viewModelScope.launch {
             try {
                 repository.getAllUserProducts(email) {
-                    Timber.tag("products amount").i("{$it.size}")
                     if (it.isEmpty())
-                        allUserBook.value = listOf()
+                        allUserProducts.value = arrayListOf()
                     else
-                        allUserBook.value = it
+                        allUserProducts.value = it
                 }
             } catch (e: Exception){
 

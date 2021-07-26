@@ -16,13 +16,7 @@ class MoonCalendarFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        setHasOptionsMenu(true)
         return inflater.inflate(R.layout.fragment_moon_calendar, container, false)
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        menu.clear()
     }
 
     companion object {

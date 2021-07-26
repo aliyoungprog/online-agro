@@ -8,7 +8,8 @@ import java.util.*
 data class Product (
     val name: String? = null,
     val category: String? = null,
-    val userEmail: String? = null
+    val userEmail: String? = null,
+    var description: String?= null
 
 ) : Parcelable{
     constructor(parcel: Parcel) : this(
