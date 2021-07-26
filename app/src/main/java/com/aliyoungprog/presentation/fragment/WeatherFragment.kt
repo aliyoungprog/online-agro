@@ -39,6 +39,7 @@ class WeatherFragment : Fragment() {
         @JvmStatic
         fun getInstance() = WeatherFragment()
         var BaseUrl = "https://api.openweathermap.org/"
+
         var city_name = "almaty"
     }
 
